@@ -795,6 +795,11 @@ a.contact-value:hover {
   transition: var(--transition-normal);
 }
 
+.form-control option {
+  background-color: #0b0f19;
+  color: var(--text-primary);
+}
+
 .form-control:focus {
   outline: none;
   background: rgba(255, 255, 255, 0.06);

@@ -24,7 +24,7 @@ export const Projects: React.FC = () => {
     {
       id: 'smartvault',
       title: 'Smart Vault',
-      description: 'Cloud-native digital receipt repository. Users can upload receipt documents, which are securely stored in S3-compatible cloud storage. Extracted metadata is tracked through an analytics dashboard, and past receipts can be inspected at any time through the interactive Vault Drawer UI',
+      description: 'Cloud-native digital receipt repository. Users can upload receipt documents, which are securely stored in S3-compatible cloud storage. Extracted metadata is tracked through an analytics dashboard, and past receipts can be inspected at any time through the interactive Vault Drawer UI.',
       tech: ['Next.js','TypeScript', 'FastAPI', 'Python', 'PostgreSQL', 'AWS S3', 'React', 'Docker', 'LocalStack AWS'],
       type: 'public',
       githubUrl: 'https://github.com/jaredr-branscum/Smart-Vault',

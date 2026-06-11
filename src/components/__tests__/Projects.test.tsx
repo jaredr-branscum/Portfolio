@@ -9,6 +9,7 @@ describe('Projects Component', () => {
     // Check titles of all projects are present
     expect(screen.getByText('MistyChat')).toBeInTheDocument();
     expect(screen.getByText('Deep Catan Analysis')).toBeInTheDocument();
+    expect(screen.getByText('Smart Vault')).toBeInTheDocument();
   });
 
   test('filters projects by public category', () => {
@@ -19,6 +20,7 @@ describe('Projects Component', () => {
 
     // Public projects should be visible
     expect(screen.getByText('MistyChat')).toBeInTheDocument();
+    expect(screen.getByText('Smart Vault')).toBeInTheDocument();
 
     // Private projects should not be visible
     expect(screen.queryByText('Deep Catan Analysis')).not.toBeInTheDocument();
@@ -35,6 +37,7 @@ describe('Projects Component', () => {
 
     // Public projects should not be visible
     expect(screen.queryByText('MistyChat')).not.toBeInTheDocument();
+    expect(screen.queryByText('Smart Vault')).not.toBeInTheDocument();
   });
 
   test('renders external links for public projects and badge for private projects', () => {
@@ -47,6 +50,12 @@ describe('Projects Component', () => {
     expect(liveLink).toBeInTheDocument();
     expect(gitLink).toHaveAttribute('href', 'https://github.com/jaredr-branscum/MistyChat');
     expect(liveLink).toHaveAttribute('href', 'https://jaredr-branscum.github.io/MistyChat/');
+
+    // Smart Vault is public but only has GitHub link
+    const vaultGitLink = screen.getByTestId('github-link-smartvault');
+    expect(vaultGitLink).toBeInTheDocument();
+    expect(vaultGitLink).toHaveAttribute('href', 'https://github.com/jaredr-branscum/Smart-Vault');
+    expect(screen.queryByTestId('live-link-smartvault')).not.toBeInTheDocument();
 
     // Deep Catan Analysis is private: should have lock badge and no links
     expect(screen.getByTestId('private-badge-deepcatananalysis')).toBeInTheDocument();
