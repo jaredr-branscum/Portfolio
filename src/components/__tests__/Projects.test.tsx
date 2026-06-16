@@ -57,9 +57,9 @@ describe('Projects Component', () => {
     expect(vaultGitLink).toHaveAttribute('href', 'https://github.com/jaredr-branscum/Smart-Vault');
     expect(screen.queryByTestId('live-link-smartvault')).not.toBeInTheDocument();
 
-    // Deep Catan Analysis is private: should have lock badge and no links
+    // Deep Catan Analysis is private: should have lock badge and has live link
     expect(screen.getByTestId('private-badge-deepcatananalysis')).toBeInTheDocument();
     expect(screen.queryByTestId('github-link-deepcatananalysis')).not.toBeInTheDocument();
-    expect(screen.queryByTestId('live-link-deepcatananalysis')).not.toBeInTheDocument();
+    expect(screen.queryByTestId('live-link-deepcatananalysis')).toBeInTheDocument();
   });
 });
