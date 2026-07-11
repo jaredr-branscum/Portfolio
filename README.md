@@ -55,5 +55,5 @@ npm run build
 Every push to the `main` branch triggers the workflow defined in `.github/workflows/deploy.yml`:
 1. Checkouts the codebase.
 2. Performs clean install and runs the Vitest testing suite.
-3. Compiles production assets with target subdirectory configuration (`/Portfolio/`).
+3. Compiles production assets with target subdirectory configuration (`/portfolio/`).
 4. Deploys the bundle directly to GitHub Pages.
