@@ -41,6 +41,9 @@ jobs:
         run: npm run test
 
       - name: Build Production Assets
+        env:
+          VITE_CONTACT_EMAIL: ${{ secrets.VITE_CONTACT_EMAIL }}
+          VITE_CONTACT_ENDPOINT: ${{ secrets.VITE_CONTACT_ENDPOINT }}
         run: npm run build
 
       - name: Setup Pages

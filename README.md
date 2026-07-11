@@ -1,6 +1,6 @@
 # Personal Portfolio Website
 
-A premium, modern, and highly interactive personal portfolio website designed to showcase professional work experience and project history.
+A highly interactive personal portfolio website designed to showcase professional work experience and project history.
 
 ## Tech Stack
 - **Framework & Runtime**: React 19 (TypeScript) + Vite 8
